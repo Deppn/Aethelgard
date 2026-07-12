@@ -1,0 +1,569 @@
+/* =========================================================
+   AETHELGARD INNER PAGES
+   Dipakai oleh audition.blade.php dan merchandise.blade.php
+   ========================================================= */
+
+.inner-page {
+    background: #f4f0e7;
+}
+
+.desktop-nav a.is-active {
+    color: #d4ad64;
+}
+
+.inner-hero {
+    position: relative;
+    min-height: 760px;
+    padding: 180px 0 100px;
+    overflow: hidden;
+    color: #f8f4ea;
+    background:
+        radial-gradient(circle at 76% 43%, rgba(196, 151, 76, 0.19), transparent 28%),
+        linear-gradient(145deg, #09090e 0%, #11101a 55%, #09090d 100%);
+}
+
+.inner-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.16;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 70px 70px;
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 88%);
+}
+
+.inner-glow {
+    position: absolute;
+    top: 100px;
+    right: 8%;
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    background: rgba(205, 162, 83, 0.17);
+    filter: blur(130px);
+    pointer-events: none;
+}
+
+.inner-hero-layout {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.8fr);
+    align-items: center;
+    gap: 80px;
+}
+
+.inner-hero-copy {
+    max-width: 790px;
+}
+
+.inner-hero-copy h1 {
+    margin: 26px 0;
+    font-family: "Cinzel", serif;
+    font-size: clamp(3.4rem, 6.8vw, 7.4rem);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.inner-hero-copy h1 span {
+    color: #d4ad64;
+}
+
+.inner-hero-copy > p:not(.section-kicker) {
+    max-width: 690px;
+    color: rgba(248, 244, 234, 0.67);
+    font-size: 1.04rem;
+    line-height: 1.95;
+}
+
+.inner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 28px;
+    margin-top: 38px;
+}
+
+.text-link-light {
+    color: #f8f4ea;
+}
+
+.audition-page-hero .audition-badge,
+.merchandise-page-hero .audition-badge {
+    display: inline-flex;
+    margin-top: 24px;
+}
+
+.audition-seal,
+.merch-crest {
+    position: relative;
+    display: grid;
+    width: min(100%, 440px);
+    aspect-ratio: 1;
+    place-items: center;
+    justify-self: end;
+}
+
+.seal-ring,
+.merch-orbit {
+    position: absolute;
+    border: 1px solid rgba(215, 179, 108, 0.42);
+    border-radius: 50%;
+}
+
+.seal-ring-one {
+    inset: 2%;
+    animation: inner-spin 28s linear infinite;
+}
+
+.seal-ring-two {
+    inset: 16%;
+    border-style: dashed;
+    animation: inner-spin-reverse 19s linear infinite;
+}
+
+.seal-ring-one::before,
+.seal-ring-one::after,
+.seal-ring-two::before,
+.seal-ring-two::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    content: "";
+    border-radius: 50%;
+    background: #d4ad64;
+    box-shadow: 0 0 20px rgba(212, 173, 100, 0.8);
+}
+
+.seal-ring-one::before {
+    top: -5px;
+    left: 50%;
+}
+
+.seal-ring-one::after {
+    right: -5px;
+    top: 50%;
+}
+
+.seal-ring-two::before {
+    bottom: -5px;
+    left: 50%;
+}
+
+.seal-ring-two::after {
+    left: -5px;
+    top: 50%;
+}
+
+.seal-letter {
+    font-family: "Cinzel", serif;
+    font-size: clamp(8rem, 18vw, 13rem);
+    color: #d4ad64;
+    text-shadow: 0 0 80px rgba(212, 173, 100, 0.22);
+}
+
+.audition-seal small {
+    position: absolute;
+    bottom: 18%;
+    letter-spacing: 0.35em;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.audition-standalone {
+    min-height: auto;
+}
+
+.audition-process,
+.merchandise-catalog,
+.merch-information {
+    background: #f4f0e7;
+}
+
+.page-section-heading {
+    display: grid;
+    grid-template-columns: 1fr 0.66fr;
+    align-items: end;
+    gap: 70px;
+    margin-bottom: 64px;
+}
+
+.page-section-heading h2 {
+    margin: 14px 0 0;
+    font-family: "Cinzel", serif;
+    font-size: clamp(2.8rem, 5.4vw, 5.9rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+    color: #121117;
+}
+
+.page-section-heading > p:last-child {
+    color: #6e695f;
+    line-height: 1.9;
+}
+
+.process-grid,
+.merch-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid rgba(18, 17, 23, 0.17);
+    border-left: 1px solid rgba(18, 17, 23, 0.17);
+}
+
+.process-card,
+.merch-info-card {
+    min-height: 320px;
+    padding: 36px;
+    border-right: 1px solid rgba(18, 17, 23, 0.17);
+    border-bottom: 1px solid rgba(18, 17, 23, 0.17);
+}
+
+.process-card > span,
+.merch-info-card > span {
+    display: inline-flex;
+    margin-bottom: 70px;
+    color: #9d7840;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+}
+
+.process-card h3,
+.merch-info-card h3 {
+    margin: 0 0 18px;
+    font-family: "Cinzel", serif;
+    font-size: 1.5rem;
+}
+
+.process-card p,
+.merch-info-card p {
+    margin: 0;
+    color: #716b61;
+    line-height: 1.85;
+}
+
+.inner-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+    color: #f8f4ea;
+    background:
+        radial-gradient(circle at 50% 10%, rgba(198, 155, 82, 0.2), transparent 35%),
+        #0a0a0f;
+}
+
+.inner-cta-content {
+    max-width: 920px;
+    text-align: center;
+}
+
+.inner-cta h2 {
+    margin: 18px 0;
+    font-family: "Cinzel", serif;
+    font-size: clamp(2.8rem, 5.3vw, 5.8rem);
+    line-height: 1.05;
+}
+
+.inner-cta p:not(.section-kicker) {
+    max-width: 700px;
+    margin: 0 auto 34px;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.9;
+}
+
+/* Merchandise */
+.merch-crest {
+    min-height: 430px;
+}
+
+.merch-box {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    width: 240px;
+    height: 300px;
+    place-items: center;
+    border: 1px solid rgba(228, 194, 124, 0.58);
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.015)),
+        #11101a;
+    box-shadow:
+        0 40px 90px rgba(0, 0, 0, 0.44),
+        inset 0 0 0 12px rgba(255, 255, 255, 0.018);
+    transform: rotate(5deg);
+}
+
+.merch-box::before,
+.merch-box::after {
+    position: absolute;
+    content: "";
+    border: 1px solid rgba(212, 173, 100, 0.4);
+}
+
+.merch-box::before {
+    inset: 20px;
+}
+
+.merch-box::after {
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.merch-box span {
+    font-family: "Cinzel", serif;
+    font-size: 5.4rem;
+    color: #d4ad64;
+}
+
+.merch-box small {
+    position: absolute;
+    bottom: 42px;
+    font-size: 0.65rem;
+    letter-spacing: 0.28em;
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.merch-orbit {
+    inset: 2%;
+    border-style: dashed;
+    animation: inner-spin 32s linear infinite;
+}
+
+.merch-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 38px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(18, 17, 23, 0.17);
+}
+
+.merch-filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.merch-filter {
+    padding: 10px 16px;
+    border: 1px solid rgba(18, 17, 23, 0.16);
+    border-radius: 999px;
+    color: #817a6e;
+    background: transparent;
+    font: inherit;
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+}
+
+.merch-filter.is-selected {
+    color: #f8f4ea;
+    border-color: #17151d;
+    background: #17151d;
+}
+
+.merch-count {
+    color: #8d867a;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.merch-card {
+    overflow: hidden;
+    border: 1px solid rgba(18, 17, 23, 0.14);
+    background: #ebe6dc;
+}
+
+.merch-image-skeleton {
+    position: relative;
+    display: grid;
+    aspect-ratio: 1 / 1.08;
+    place-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(221, 213, 199, 0.66)),
+        #ddd5c7;
+}
+
+.merch-image-skeleton::after,
+.skeleton-line::after,
+.skeleton-button::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.72), transparent);
+    animation: skeleton-sweep 1.9s ease-in-out infinite;
+}
+
+.skeleton-emblem {
+    font-family: "Cinzel", serif;
+    font-size: 6rem;
+    color: rgba(79, 69, 54, 0.13);
+}
+
+.skeleton-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 10px;
+    border: 1px solid rgba(27, 24, 31, 0.15);
+    font-size: 0.64rem;
+    letter-spacing: 0.16em;
+    color: #82796b;
+    background: rgba(247, 243, 234, 0.66);
+}
+
+.merch-card-body {
+    padding: 24px;
+}
+
+.skeleton-line,
+.skeleton-button {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #d6cfc3;
+}
+
+.skeleton-line {
+    height: 12px;
+    margin-bottom: 14px;
+}
+
+.skeleton-line-small {
+    width: 32%;
+    height: 9px;
+}
+
+.skeleton-line-title {
+    width: 78%;
+    height: 20px;
+}
+
+.skeleton-line-medium {
+    width: 56%;
+}
+
+.merch-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+}
+
+.skeleton-line-price {
+    width: 34%;
+    height: 17px;
+    margin: 0;
+}
+
+.skeleton-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.merch-information {
+    padding-top: 0;
+}
+
+.merch-info-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@keyframes inner-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes inner-spin-reverse {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes skeleton-sweep {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 1050px) {
+    .inner-hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .audition-seal,
+    .merch-crest {
+        justify-self: center;
+        width: min(78vw, 420px);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .merch-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .inner-hero {
+        min-height: auto;
+        padding: 140px 0 80px;
+    }
+
+    .inner-hero-layout {
+        gap: 48px;
+    }
+
+    .inner-hero-copy h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+
+    .page-section-heading {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .process-grid,
+    .merch-info-grid,
+    .merch-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-card,
+    .merch-info-card {
+        min-height: auto;
+    }
+
+    .process-card > span,
+    .merch-info-card > span {
+        margin-bottom: 38px;
+    }
+
+    .merch-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .seal-ring,
+    .merch-orbit,
+    .merch-image-skeleton::after,
+    .skeleton-line::after,
+    .skeleton-button::after {
+        animation: none;
+    }
+}

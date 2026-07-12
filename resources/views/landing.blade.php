@@ -18,7 +18,7 @@
 
     <header class="site-header" id="siteHeader">
         <div class="container nav-wrap">
-            <a class="brand" href="#home" aria-label="Aethelgard Project">
+            <a class="brand" href="{{ route('home') }}" aria-label="Aethelgard Project">
                 <span class="brand-mark" aria-hidden="true">
                     <svg viewBox="0 0 64 64" role="img">
                         <path d="M32 3 56 16v25L32 61 8 41V16L32 3Z" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -33,14 +33,15 @@
             </a>
 
             <nav class="desktop-nav" aria-label="Navigasi utama">
-                <a href="#about">About</a>
-                <a href="#talents">Talents</a>
-                <a href="#services">Programs</a>
-                <a href="#news">News</a>
-                <a href="#audition">Audition</a>
+                <a href="{{ route('home') }}#about">About</a>
+                <a href="{{ route('home') }}#talents">Talents</a>
+                <a href="{{ route('home') }}#services">Programs</a>
+                <a href="{{ route('home') }}#news">News</a>
+                <a href="{{ route('merchandise') }}">Merchandise</a>
+                <a href="{{ route('audition') }}">Audition</a>
             </nav>
 
-            <a class="nav-contact" href="#contact">Contact <span>↗</span></a>
+            <a class="nav-contact" href="{{ route('home') }}#contact">Contact <span>↗</span></a>
 
             <button class="menu-button" id="menuButton" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
                 <span></span>
@@ -50,12 +51,13 @@
 
         <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
             <nav aria-label="Navigasi mobile">
-                <a href="#about">About</a>
-                <a href="#talents">Talents</a>
-                <a href="#services">Programs</a>
-                <a href="#news">News</a>
-                <a href="#audition">Audition</a>
-                <a href="#contact">Contact</a>
+                <a href="{{ route('home') }}#about">About</a>
+                <a href="{{ route('home') }}#talents">Talents</a>
+                <a href="{{ route('home') }}#services">Programs</a>
+                <a href="{{ route('home') }}#news">News</a>
+                <a href="{{ route('merchandise') }}">Merchandise</a>
+                <a href="{{ route('audition') }}">Audition</a>
+                <a href="{{ route('home') }}#contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -78,7 +80,7 @@
                     </p>
                     <div class="hero-actions">
                         <a class="button button-gold" href="#talents">Meet our talents <span>↗</span></a>
-                        <a class="text-link" href="#audition">Join the realm <span>↓</span></a>
+                        <a class="text-link" href="{{ route('audition') }}">Join the realm <span>↗</span></a>
                     </div>
 
                     <div class="hero-stat-list" aria-label="Informasi agensi">
@@ -369,37 +371,10 @@
             </div>
         </section>
 
-        <section class="section audition" id="audition">
-            <div class="audition-glow" aria-hidden="true"></div>
-            <div class="container audition-layout">
-                <div class="audition-copy reveal">
-                    <p class="section-kicker light">06 — Audition</p>
-                    <span class="audition-badge">NEXT CHAPTER · COMING SOON</span>
-                    <h2>Your voice could<br>shape the next realm.</h2>
-                    <p>
-                        Kami mencari pribadi yang konsisten, komunikatif, terbuka terhadap evaluasi, dan memiliki semangat untuk berkembang sebagai virtual entertainer.
-                    </p>
-                    <a class="button button-light" href="#contact">Get audition updates <span>↗</span></a>
-                </div>
-
-                <div class="audition-requirements reveal" data-delay="100">
-                    <h3>Basic requirements</h3>
-                    <ul>
-                        <li><span>01</span> Berusia minimal 18 tahun saat mendaftar.</li>
-                        <li><span>02</span> Memiliki perangkat dan koneksi yang memadai untuk streaming.</li>
-                        <li><span>03</span> Bersedia mengikuti jadwal, training, dan evaluasi.</li>
-                        <li><span>04</span> Mampu menjaga etika, komunikasi, dan reputasi agensi.</li>
-                        <li><span>05</span> Memiliki keunikan atau arah konten yang ingin dikembangkan.</li>
-                    </ul>
-                    <p class="audition-note">Formulir pendaftaran akan ditampilkan saat periode audisi dibuka.</p>
-                </div>
-            </div>
-        </section>
-
         <section class="section company" id="company">
             <div class="container">
                 <div class="company-head reveal">
-                    <p class="section-kicker">07 — Company</p>
+                    <p class="section-kicker">06 — Company</p>
                     <h2>A small team building<br>a larger virtual world.</h2>
                 </div>
 
@@ -417,7 +392,7 @@
         <section class="contact" id="contact">
             <div class="contact-glow" aria-hidden="true"></div>
             <div class="container contact-content reveal">
-                <p class="section-kicker light">08 — Contact</p>
+                <p class="section-kicker light">07 — Contact</p>
                 <h2>Open the gate.<br>Start a new story.</h2>
                 <p>Untuk kerja sama brand, event, media, kolaborasi talent, atau informasi audisi.</p>
                 <a class="contact-email" href="mailto:hello@aethelgardproject.com">
@@ -437,7 +412,7 @@
 
     <footer class="site-footer">
         <div class="container footer-top">
-            <a class="brand footer-brand" href="#home">
+            <a class="brand footer-brand" href="{{ route('home') }}">
                 <span class="brand-mark" aria-hidden="true">
                     <svg viewBox="0 0 64 64">
                         <path d="M32 3 56 16v25L32 61 8 41V16L32 3Z" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -454,15 +429,16 @@
             <div class="footer-links">
                 <div>
                     <small>EXPLORE</small>
-                    <a href="#about">About</a>
-                    <a href="#talents">Talents</a>
-                    <a href="#services">Programs</a>
+                    <a href="{{ route('home') }}#about">About</a>
+                    <a href="{{ route('home') }}#talents">Talents</a>
+                    <a href="{{ route('home') }}#services">Programs</a>
                 </div>
                 <div>
                     <small>INFORMATION</small>
-                    <a href="#news">News</a>
-                    <a href="#audition">Audition</a>
-                    <a href="#contact">Contact</a>
+                    <a href="{{ route('home') }}#news">News</a>
+                    <a href="{{ route('merchandise') }}">Merchandise</a>
+                    <a href="{{ route('audition') }}">Audition</a>
+                    <a href="{{ route('home') }}#contact">Contact</a>
                 </div>
                 <div>
                     <small>SOCIAL</small>
@@ -476,7 +452,7 @@
         <div class="container footer-bottom">
             <p>© {{ date('Y') }} Aethelgard Project. All rights reserved.</p>
             <p class="footer-disclaimer">Aethelgard Project adalah project agensi VTuber independen.</p>
-            <a href="#home">Back to top ↑</a>
+            <a href="{{ route('home') }}">Back to top ↑</a>
         </div>
     </footer>
 
